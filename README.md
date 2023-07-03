@@ -6,6 +6,6 @@ O App Orçamento Pessoal é um projeto criado a partir de um desafio proposto po
 ## Front End 
 - HTML / CSS / JS 
 ## Autor 
-Daniel Machado Corrêa 
+Daniel Machado  
 <br />
 https://www.linkedin.com/in/daniel-machado-cs
