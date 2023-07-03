@@ -41,25 +41,25 @@ class Despesa {
 // ============================================
 class Bd {
   constructor() {
-    let id = sessionStorage.getItem("id");
+    let id = localStorage.getItem("id");
     if (id === null) {
-      sessionStorage.setItem("id", 0);
+      localStorage.setItem("id", 0);
     }
   }
   getProximoId() {
-    let proximoId = sessionStorage.getItem("id");
+    let proximoId = localStorage.getItem("id");
     return parseInt(proximoId) + 1;
   }
   gravar(d) {
     let id = this.getProximoId();
-    sessionStorage.setItem(id, JSON.stringify(d));
-    sessionStorage.setItem("id", id);
+    localStorage.setItem(id, JSON.stringify(d));
+    localStorage.setItem("id", id);
   }
   recuperarRegistros() {
-    let id = sessionStorage.getItem("id");
+    let id = localStorage.getItem("id");
     let despesas = [];
     for (let i = 1; i <= id; i++) {
-      let despesa = JSON.parse(sessionStorage.getItem(i));
+      let despesa = JSON.parse(localStorage.getItem(i));
 
       if (despesa === null) {
         continue;
@@ -264,7 +264,7 @@ const warning = (el) => {
     });
   });
   btnConfirm.addEventListener("click", () => {
-    sessionStorage.removeItem(el.id);
+    localStorage.removeItem(el.id);
     window.location.reload();
   });
   modalBtns.append(...btns);
