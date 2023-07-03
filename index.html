@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="registro.css" />
+    <script src="app.js" defer></script>
+    <title>Orçamento Pessoal</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <i class="fa-solid fa-piggy-bank fa-flip-horizontal"></i>
+        <i class="fa-solid fa-bars bars"></i>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Cadastro</a>
+          </li>
+          <li>
+            <a href="consulta.html">Consulta</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Registro de nova despesa</h1>
+      <div id="boxs">
+        <select id="mes">
+          <option value="" select>Mês</option>
+          <option value="1">Janeiro</option>
+          <option value="2">Fevereiro</option>
+          <option value="3">Março</option>
+          <option value="4">Abril</option>
+          <option value="5">Maio</option>
+          <option value="6">Junho</option>
+          <option value="7">Julho</option>
+          <option value="8">Agosto</option>
+          <option value="9">Setembro</option>
+          <option value="10">Outubro</option>
+          <option value="11">Novembro</option>
+          <option value="12">Dezembro</option>
+        </select>
+
+        <input type="text" id="dia" maxlength="2" max="3" placeholder="Dia" />
+
+        <select id="tipoDespesa">
+          <option value="" select>Tipo</option>
+          <option value="1">Alimentação</option>
+          <option value="2">Educação</option>
+          <option value="3">Lazer</option>
+          <option value="4">Saúde</option>
+          <option value="5">Transporte</option>
+        </select>
+
+        <input type="text" id="descricao" placeholder="Descrição" />
+        <input type="number" id="valor" placeholder="Valor" />
+
+        <button id="btnAddDespesa" onclick="addDespesa()">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
