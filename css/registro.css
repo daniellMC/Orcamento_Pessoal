@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  list-style: none;
+  outline: none;
+}
+
+/* CABEÇALHO */
+header {
+  background-color: rgba(16, 64, 148, 0.79);
+  color: #fff;
+
+  height: 5.8rem;
+  padding: 2rem;
+  font-size: 2.5rem;
+
+  overflow: hidden;
+}
+#logo {
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fff;
+}
+.bars {
+  cursor: pointer;
+}
+main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+}
+main h1 {
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+}
+#boxs {
+  width: 35rem;
+}
+#boxs select {
+  margin-right: 1rem;
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+#boxs input {
+  margin-right: 1rem;
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+#boxs #dia {
+  width: 5rem;
+}
+#boxs select {
+  cursor: pointer;
+}
+#mes {
+  width: 8rem;
+  margin-bottom: 0.45rem;
+}
+#tipoDespesa {
+  width: 18rem;
+}
+#descricao {
+  width: 24rem;
+}
+#valor {
+  width: 5rem;
+}
+#btnAddDespesa {
+  border-radius: 0.25rem;
+  width: 2rem;
+
+  padding: 0.4rem;
+  border: none;
+  cursor: pointer;
+
+  color: #fff;
+  background-color: rgba(16, 64, 148, 0.79);
+
+  transition: 0.1s ease-in-out;
+}
+#btnAddDespesa:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+#btnAddDespesa i {
+  font-size: 1rem;
+}
+/* MODAL */
+#fade,
+#modal {
+  transition: 1.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+#fade.hide,
+#modal.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+#modal.hide {
+  top: 0;
+}
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+#modal {
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.25rem;
+  background-color: #fff;
+  z-index: 10;
+  width: 32rem;
+  padding: 1rem;
+}
+.modal-header {
+  /* H3 */
+  color: green;
+}
+.error-modal-header {
+  /* H3 */
+  color: red;
+}
+.modal-header,
+.error-modal-header {
+  font-weight: 500;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.modal-body > p {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+/* BTN-SUCCESS */
+#close-modal {
+  background-color: green;
+}
+/* BTN-ERROR */
+#error-close-modal {
+  background-color: red;
+}
+#error-close-modal,
+#close-modal {
+  margin-top: 1rem;
+  float: right;
+  padding: 0.45rem;
+  font-size: 0.85rem;
+  border-radius: 0.15rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.1s ease-in-out;
+}
+
+#close-modal:hover,
+#error-close-modal:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
